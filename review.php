@@ -26,33 +26,46 @@
 		<div class="loader"></div>
 	</div>
 
-	<!-- Header section -->
-	<header class="header-section">
-		<div class="container">
-			<!-- logo -->
-			<a class="site-logo" href="index.php">
-				<img src="img/logo.png" alt="">
-			</a>
-			<div class="user-panel">
-				<a href="login.php">Iniciar Sesión / Registrarse</a>
-			</div>
-			<!-- responsive -->
-			<div class="nav-switch">
-				<i class="fa fa-bars"></i>
-			</div>
-			<!-- site menu -->
-			<nav class="main-menu">
-				<ul>
-					<li><a href="index.php">Inicio</a></li>
-					<li><a href="review.html">Juegos</a></li>
-					<li><a href="categories.html">Blog</a></li>
-					<li><a href="foro/index.php">Foro</a></li>
-					<li><a href="contact.html">Contacto</a></li>
-				</ul>
-			</nav>
-		</div>
-	</header>
-	<!-- Header section end -->
+    <!-- Header section -->
+    <header class="header-section">
+      <div class="container">
+        <!-- logo -->
+        <a class="site-logo" href="index.php">
+          <img src="img/logo.png" alt="" />
+        </a>
+        <!-- responsive -->
+        <div class="nav-switch">
+          <i class="fa fa-bars"></i>
+        </div>
+        <!-- site menu -->
+        <nav class="main-menu">
+          
+          <ul>
+            <li><a href="index.php">Inicio</a></li>
+            <li><a href="review.php">Juegos</a></li>
+            <li><a href="categories.php">Blog</a></li>
+            <li><a href="foro/index.php">Foro</a></li>
+            <li><a href="contact.php">Contacto</a></li>
+          </ul>
+          <div class="user-panel">
+        <?php 
+        session_start();
+        if (isset($_SESSION['usuario'])) { ?>
+        <img src="./img/user.webp" alt="Foto de Usuario">
+        <div>Bienvenido, <?php echo $_SESSION['usuario']; ?></div>
+        <div class="user-panel">
+        <a href="logout.php">Cerrar sesión</a>
+        </div>
+    </div>
+<?php } else { ?>
+    <a href="login.php">Iniciar Sesión / Registrarse</a>
+<?php } ?>
+
+        </div>
+        </nav>
+      </div>
+    </header>
+    <!-- Header section end -->
 
 
 	<!-- Latest news section -->
@@ -318,10 +331,10 @@
 		<div class="container">
 			<ul class="footer-menu">
 				<li><a href="index.php">Inicio</a></li>
-				<li><a href="review.html">Juegos</a></li>
-				<li><a href="categories.html">Blog</a></li>
+				<li><a href="review.php">Juegos</a></li>
+				<li><a href="categories.php">Blog</a></li>
 				<li><a href="foro/index.php">Foro</a></li>
-				<li><a href="contact.html">Contacto</a></li>
+				<li><a href="contact.php">Contacto</a></li>
 			</ul>
 			<p class="copyright">Copyright &copy;<script>document.write(new Date().getFullYear());</script> || Esta web está hecha por <a href="https://www.linkedin.com/in/marta-torres-rubio/" target="_blank">Marta Torres Rubio</a></p>
 		</div>

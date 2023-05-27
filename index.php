@@ -45,10 +45,10 @@
           
           <ul>
             <li><a href="index.php">Inicio</a></li>
-            <li><a href="review.html">Juegos</a></li>
-            <li><a href="categories.html">Blog</a></li>
+            <li><a href="review.php">Juegos</a></li>
+            <li><a href="categories.php">Blog</a></li>
             <li><a href="foro/index.php">Foro</a></li>
-            <li><a href="contact.html">Contacto</a></li>
+            <li><a href="contact.php">Contacto</a></li>
           </ul>
           <div class="user-panel">
         <?php 
@@ -512,10 +512,10 @@
       <div class="container">
         <ul class="footer-menu">
           <li><a href="index.php">Inicio</a></li>
-          <li><a href="review.html">Juegos</a></li>
-          <li><a href="categories.html">Blog</a></li>
+          <li><a href="review.php">Juegos</a></li>
+          <li><a href="categories.php">Blog</a></li>
           <li><a href="foro/index.php">Foro</a></li>
-          <li><a href="contact.html">Contacto</a></li>
+          <li><a href="contact.php">Contacto</a></li>
         </ul>
         <p class="copyright">
           Copyright &copy;
