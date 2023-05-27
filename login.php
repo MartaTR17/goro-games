@@ -5,7 +5,7 @@ session_start();
 // Verificar si el usuario ha iniciado sesión
 if (isset($_SESSION['usuario'])) {
   // Redirigir al usuario a la página de index.html
-  header("location: index.html");
+  header("location: index.php");
   exit;
 }
 
@@ -19,7 +19,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     // Iniciar la sesión del usuario y redirigir a la página de index.html
     $_SESSION['usuario'] = $usuario;
     setcookie('usuario', $usuario, time() + 86400, "/");
-    header("location: index.html");
+    header("location: index.php");
     exit;
   }
 }
@@ -72,7 +72,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 <div class="inputbox">
                   <input type="text" name="user" placeholder="  Usuario">
                   <input type="text" name="email" placeholder="  Correo">
-                  <input type="password" name="password" placeholder="  Contraseña">
+                  <input type="password" name="password" placeholder="Contraseña">
                 </div>
                 <button>REGISTRARSE</button>
               </div>
